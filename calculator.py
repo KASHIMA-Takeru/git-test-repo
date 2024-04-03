@@ -22,6 +22,8 @@ class Calculator:
     @staticmethod
     def dev(a, b) -> float:
         #     """割り算を行う."""
+        if b == 0:
+            print("Error")
         return a / b
     # 文字列を入力すると計算結果を返す関数を実装してください
     # @staticmethod
