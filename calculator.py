@@ -20,15 +20,33 @@ class Calculator:
         return a * b
     # 割り算を行う関数を実装してください
     @staticmethod
-    def dev(a, b) -> float:
+    def div(a, b) -> float:
         #     """割り算を行う."""
         if b == 0:
             print("Error")
         return a / b
     # 文字列を入力すると計算結果を返す関数を実装してください
-    # @staticmethod
-    # def cal_formula(formula:str) -> float:
-    #     """計算式の分割と計算"""
+    @staticmethod
+    def cal_formula(formula:str) -> float:
+        #     """計算式の分割と計算"""
+        #文字列の分割
+        a, operator, b = formula.split()
+        
+        #str -> int
+        a = int(a)
+        b = int(b)
+        
+        #演算子によって計算方法の分岐
+        if operator == '+':
+            return Calculator.add(a, b)
+        
+        elif operator == '-':
+            return Calculator.sub(a, b)
+        
+        elif operator == '*':
+            return Calculator.mul(a, b)
+        elif operator == '/':
+            return Calculator.div(a, b)
 
 
 # テストコード
@@ -46,8 +64,13 @@ if __name__ == '__main__':
     #割り算
     print("division > ", Calculator.div(numa, numb))
     # 文字列の読み込み
+    print("calculation from string > ", Calculator.cal_formula('2 + 3'))
     
 
     # 計算
+    print("Input caluclation formula > ", end="")
+    form = input()
+    ans = Calculator.cal_formula(form)
 
     # 結果の表示
+    print("answer > ", ans)
