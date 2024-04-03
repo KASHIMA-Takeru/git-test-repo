@@ -10,13 +10,14 @@ class Calculator:
     # 引き算を行う関数を実装してください
     @staticmethod
     def sub(a, b)-> int:
-    #     """引き算を行う."""
+        #     """引き算を行う."""
         return a - b
+    
     # 掛け算を行う関数を実装してください
-    # @staticmethod
-    # def mul(a, b) -> int:
-    #     """掛け算を行う."""
-
+    @staticmethod
+    def mul(a, b) -> int:
+        #     """掛け算を行う."""
+        return a * b
     # 割り算を行う関数を実装してください
     # @staticmethod
     # def dev(a, b) -> float:
@@ -35,10 +36,11 @@ if __name__ == '__main__':
 
     # 各関数のテストコードを作成してください
     #足し算
-    print(Calculator.add(numa, numb))
+    print("addition > ", Calculator.add(numa, numb))
     #引き算
-    print(Calculator.sub(numa, numb))
-
+    print("substraction > ", Calculator.sub(numa, numb))
+    #掛け算
+    print("multiplication > ", Calculator.mul(numa, numb))
     # 文字列の読み込み
 
     # 計算
