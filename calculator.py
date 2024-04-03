@@ -42,6 +42,7 @@ if __name__ == '__main__':
     #掛け算
     print("multiplication > ", Calculator.mul(numa, numb))
     # 文字列の読み込み
+    print("end")
 
     # 計算
 
