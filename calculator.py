@@ -19,10 +19,10 @@ class Calculator:
         #     """掛け算を行う."""
         return a * b
     # 割り算を行う関数を実装してください
-    # @staticmethod
-    # def dev(a, b) -> float:
-    #     """割り算を行う."""
-
+    @staticmethod
+    def dev(a, b) -> float:
+        #     """割り算を行う."""
+        return a / b
     # 文字列を入力すると計算結果を返す関数を実装してください
     # @staticmethod
     # def cal_formula(formula:str) -> float:
@@ -41,8 +41,10 @@ if __name__ == '__main__':
     print("substraction > ", Calculator.sub(numa, numb))
     #掛け算
     print("multiplication > ", Calculator.mul(numa, numb))
+    #割り算
+    print("division > ", Calculator.div(numa, numb))
     # 文字列の読み込み
-    print("end")
+    
 
     # 計算
 
